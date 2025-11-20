@@ -2,10 +2,78 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <title>HackDeacon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HackDeacon - 技术探索者</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Hi，我是 HackDeacon 👋</h1>
-  <p>这里是我的个人主页，之后会放博客、自媒体链接和项目。</p>
+  <div class="gradient-bg">
+    <div class="gradient-overlay"></div>
+  </div>
+
+  <div class="noise-bg"></div>
+
+  <div class="cursor"></div>
+
+  <main class="main-content">
+    <header class="hero-section">
+      <div class="hero-contain">
+        <h1 class="hero-title">
+          <span class="title-line">Hi，我是 HackDeacon</span>
+          <span class="title-line accent">👋</span>
+        </h1>
+        <p class="hero-subtitle">
+          <span class="subtitle-line">技术探索者</span>
+          <span class="subtitle-line">代码创作者</span>
+          <span class="subtitle-line">持续学习者</span>
+        </p>
+        <div class="description">
+          <p>这里汇集了我的思考、项目和分享</p>
+          <p>欢迎来到我的数字空间</p>
+        </div>
+      </div>
+    </header>
+
+    <section class="links-section">
+      <div class="links-grid">
+        <a href="#" class="link-card" data-label="博客">
+          <span class="card-icon">📝</span>
+          <h3>技术博客</h3>
+          <p>记录学习过程与技术思考</p>
+        </a>
+        <a href="#" class="link-card" data-label="项目">
+          <span class="card-icon">💻</span>
+          <h3>开源项目</h3>
+          <p>探索与创造，分享代码成果</p>
+        </a>
+        <a href="#" class="link-card" data-label="媒体">
+          <span class="card-icon">📱</span>
+          <h3>自媒体</h3>
+          <p>更多平台，更多分享</p>
+        </a>
+        <a href="#" class="link-card" data-label="联系">
+          <span class="card-icon">📧</span>
+          <h3>联系我</h3>
+          <p>交流与合作的起点</p>
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p class="footer-text">Crafted with passion & curiosity</p>
+      <div class="footer-links">
+        <a href="#">GitHub</a>
+        <span class="divider">•</span>
+        <a href="#">LinkedIn</a>
+        <span class="divider">•</span>
+        <a href="#">Twitter</a>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
