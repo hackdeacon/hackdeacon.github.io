@@ -1,79 +1,194 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HackDeacon - 技术探索者</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黑衣执事 | hackdeacon.cn</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons-font@1.0.0/css/simple-icons.min.css">
 </head>
 <body>
-  <div class="gradient-bg">
-    <div class="gradient-overlay"></div>
-  </div>
-
-  <div class="noise-bg"></div>
-
-  <div class="cursor"></div>
-
-  <main class="main-content">
-    <header class="hero-section">
-      <div class="hero-contain">
-        <h1 class="hero-title">
-          <span class="title-line">Hi，我是 HackDeacon</span>
-          <span class="title-line accent">👋</span>
-        </h1>
-        <p class="hero-subtitle">
-          <span class="subtitle-line">技术探索者</span>
-          <span class="subtitle-line">代码创作者</span>
-          <span class="subtitle-line">持续学习者</span>
-        </p>
-        <div class="description">
-          <p>这里汇集了我的思考、项目和分享</p>
-          <p>欢迎来到我的数字空间</p>
+    <header>
+        <div class="logo-placeholder" aria-label="Logo 占位">LOGO</div>
+        <nav class="desktop-nav">
+            <a href="#hero">首页</a>
+            <a href="#skills">技能</a>
+            <a href="#projects">项目</a>
+            <a href="#channels">频道</a>
+        </nav>
+        <button class="menu-button" aria-label="展开导航">☰</button>
+        <div class="mobile-menu">
+            <a href="#hero">首页</a>
+            <a href="#skills">技能</a>
+            <a href="#projects">项目</a>
+            <a href="#channels">频道</a>
         </div>
-      </div>
     </header>
 
-    <section class="links-section">
-      <div class="links-grid">
-        <a href="#" class="link-card" data-label="博客">
-          <span class="card-icon">📝</span>
-          <h3>技术博客</h3>
-          <p>记录学习过程与技术思考</p>
-        </a>
-        <a href="#" class="link-card" data-label="项目">
-          <span class="card-icon">💻</span>
-          <h3>开源项目</h3>
-          <p>探索与创造，分享代码成果</p>
-        </a>
-        <a href="#" class="link-card" data-label="媒体">
-          <span class="card-icon">📱</span>
-          <h3>自媒体</h3>
-          <p>更多平台，更多分享</p>
-        </a>
-        <a href="#" class="link-card" data-label="联系">
-          <span class="card-icon">📧</span>
-          <h3>联系我</h3>
-          <p>交流与合作的起点</p>
-        </a>
-      </div>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-inner">
+                <div class="logo-slot" aria-label="Logo 预留区">
+                    <div class="logo-placeholder-small">LOGO</div>
+                </div>
+                <div class="avatar-container">
+                    <div class="avatar"></div>
+                </div>
+                <h1 class="name">黑衣执事</h1>
+                <p class="slogan">皆为悦己而作</p>
+            </div>
+            <div class="scroll-hint" aria-hidden="true">SCROLL</div>
+        </div>
     </section>
 
-    <footer class="footer">
-      <p class="footer-text">Crafted with passion & curiosity</p>
-      <div class="footer-links">
-        <a href="#">GitHub</a>
-        <span class="divider">•</span>
-        <a href="#">LinkedIn</a>
-        <span class="divider">•</span>
-        <a href="#">Twitter</a>
-      </div>
-    </footer>
-  </main>
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">技能与标签</h2>
+                <p class="intro">一名前端开发者，科技数码爱好者，自媒体创作者。</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card front-end">
+                    <div class="card-top">
+                        <h3>前端</h3>
+                        <span class="pill">核心栈</span>
+                    </div>
+                    <div class="tags">
+                        <span class="tag">Vue</span>
+                        <span class="tag">JS</span>
+                        <span class="tag">TS</span>
+                        <span class="tag">React</span>
+                        <span class="tag">Svelte</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">HTML</span>
+                    </div>
+                </div>
+                <div class="skill-card tech">
+                    <div class="card-top">
+                        <h3>科技数码</h3>
+                        <span class="pill">体验派</span>
+                    </div>
+                    <div class="tags">
+                        <span class="tag">Apple</span>
+                        <span class="tag">LUMIX</span>
+                        <span class="tag">Sony</span>
+                        <span class="tag">DJI</span>
+                        <span class="tag">Leica</span>
+                        <span class="tag">Kindle</span>
+                    </div>
+                </div>
+                <div class="skill-card media">
+                    <div class="card-top">
+                        <h3>自媒体</h3>
+                        <span class="pill">创作工具</span>
+                    </div>
+                    <div class="tags">
+                        <span class="tag">Final Cut</span>
+                        <span class="tag">AE</span>
+                        <span class="tag">PS</span>
+                        <span class="tag">Premiere Pro</span>
+                        <span class="tag">DaVinci Resolve</span>
+                        <span class="tag">Audition</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <script src="script.js"></script>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">项目</h2>
+                <p class="intro">精选作品与正在孵化的想法。</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image personal-website"></div>
+                    <div class="project-body">
+                        <h3 class="project-title">个人网站</h3>
+                        <p class="project-description">现代化个人主页，黑白银灰基调搭配粉色点缀，响应式覆盖桌面与移动端。</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Vue</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">CSS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image mini-app"></div>
+                    <div class="project-body">
+                        <h3 class="project-title">小程序</h3>
+                        <p class="project-description">面向年轻用户的体验型小程序，流畅动画与轻量交互。</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Cloud Functions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Channels Section -->
+    <section id="channels" class="channels">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">自媒体频道</h2>
+                <p class="intro">计划内容：产品体验 · 技术分享 · 生活记录</p>
+            </div>
+            <div class="channels-grid">
+                <div class="channel-card wechat">
+                    <h3>微信公众号</h3>
+                    <p>深度文字与长图文拆解，专注产品体验与技术思考。</p>
+                </div>
+                <div class="channel-card wechat-video">
+                    <h3>微信视频号</h3>
+                    <p>日常开箱、体验和碎片化知识点，快速传递灵感。</p>
+                </div>
+                <div class="channel-card bilibili">
+                    <h3>哔哩哔哩</h3>
+                    <p>教程、评测、幕后制作过程分享，保持真实与温度。</p>
+                </div>
+                <div class="channel-card youtube">
+                    <h3>YouTube</h3>
+                    <p>面向全球的前端与数码内容，轻松又有深度。</p>
+                </div>
+                <div class="channel-card x">
+                    <h3>X</h3>
+                    <p>实时动态、观察与想法；快速迭代的创作草稿场。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo-placeholder">LOGO</div>
+                <div class="footer-text">
+                    <p>黑白银灰，点缀一抹粉。hackdeacon.cn</p>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="GitHub">
+                        <i class="si si-github"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Email">
+                        <i class="si si-gmail"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="X">
+                        <i class="si si-x"></i>
+                    </a>
+                </div>
+            </div>
+            <p class="copyright">© 2025 黑衣执事 · All for the joy of creating.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
