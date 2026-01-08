@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>hackdeacon</title>
+    <meta name="description"
+        content="Full stack developer and UI/UX designer passionate about building elegant solutions with code. Specializing in React, Node.js, and cloud services.">
+    <meta name="keywords" content="hackdeacon, developer, full stack, UI/UX design, React, Node.js, Cloudflare">
+    <meta name="author" content="hackdeacon">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hackdeacon.github.io/">
+    <meta property="og:title" content="hackdeacon — Developer & Creator">
+    <meta property="og:description"
+        content="Full stack developer and UI/UX designer passionate about building elegant solutions with code.">
+    <meta property="og:image" content="https://pic.hackdeacon.cn/hack-640.webp">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://hackdeacon.github.io/">
+    <meta property="twitter:title" content="hackdeacon — Developer & Creator">
+    <meta property="twitter:description"
+        content="Full stack developer and UI/UX designer passionate about building elegant solutions with code.">
+    <meta property="twitter:image" content="https://pic.hackdeacon.cn/hack-640.webp">
+    <meta name="twitter:creator" content="@hackdeacon">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖤</text></svg>">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://pic.hackdeacon.cn" crossorigin>
+    <link rel="dns-prefetch" href="https://pic.hackdeacon.cn">
+
+    <!-- Critical CSS - Inline for fastest first paint -->
+    <style>
+        :root {
+            --bg: #fff;
+            --bg-secondary: #f5f5f7;
+            --text: #1d1d1f;
+            --text-secondary: #86868b;
+            --border: #d2d2d7;
+            --accent: #0A84FF;
+            --card-bg: #fff;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #000;
+                --bg-secondary: #1d1d1f;
+                --text: #f5f5f7;
+                --text-secondary: #86868b;
+                --border: #424245;
+                --accent: #FF5C8D;
+                --card-bg: #1d1d1f;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .hero {
+            min-height: 100vh;
+            min-height: 100dvh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 22px;
+        }
+    </style>
+
+    <!-- Preload CSS -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="https://pic.hackdeacon.cn/hack-640.webp" class="avatar" alt="hackdeacon profile picture" width="120"
+            height="120" loading="eager" fetchpriority="high" decoding="async">
+        <h1>hackdeacon</h1>
+        <p class="subtitle">Developer · Creator · Explorer</p>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="main-content">
+        <div class="container">
+            <p class="lead">Passionate about exploring the intersection of technology and creativity, building elegant
+                solutions with code</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills">
+        <div class="container">
+            <h2>What I Do</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">💻</div>
+                    <h3>Full Stack Development</h3>
+                    <p>React, Node.js, Python</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h3>UI/UX Design</h3>
+                    <p>Interface & Interaction Design</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">☁️</div>
+                    <h3>Cloud Services</h3>
+                    <p>Cloudflare, Serverless</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Current Section -->
+    <section class="current">
+        <div class="container">
+            <h2>What I'm Working On</h2>
+            <div class="current-card">
+                <span class="badge">In Progress</span>
+                <h3>Building Distributed Image Hosting</h3>
+                <p>A global distributed image storage solution powered by Cloudflare Workers, pursuing ultimate loading
+                    speed with zero-cost deployment.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects">
+        <div class="container">
+            <h2>What I've Built</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-number">01</div>
+                    <h3>Shadow Gallery</h3>
+                    <p>Distributed image hosting with global CDN</p>
+                    <a href="https://github.com/hackdeacon/Cloudflare-Imgbed" class="link">View Project</a>
+                </article>
+                <article class="project-card">
+                    <div class="project-number">02</div>
+                    <h3>Media Parser Suite</h3>
+                    <p>Cross-platform video parsing toolkit</p>
+                    <a href="https://github.com/hackdeacon" class="link">View Project</a>
+                </article>
+                <article class="project-card">
+                    <div class="project-number">03</div>
+                    <h3>Vinyl Stories</h3>
+                    <p>Tech and life creative blog</p>
+                    <a href="https://github.com/hackdeacon/HackStory" class="link">View Project</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Channels Section -->
+    <section class="channels">
+        <div class="container">
+            <h2>My Channels</h2>
+            <p class="section-desc">Sharing thoughts and creations across platforms</p>
+            <nav class="social-links">
+                <a href="https://github.com/hackdeacon" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://twitter.com/hackdeacon" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                    </svg>
+                    <span>Twitter</span>
+                </a>
+                <a href="https://youtube.com/@hackdeacon" target="_blank" rel="noopener noreferrer"
+                    aria-label="YouTube">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                    </svg>
+                    <span>YouTube</span>
+                </a>
+                <a href="https://space.bilibili.com/hackdeacon" target="_blank" rel="noopener noreferrer"
+                    aria-label="Bilibili">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 0 1-.373-.906c0-.356.124-.658.373-.907l.027-.027c.267-.249.573-.373.92-.373.347 0 .653.124.92.373L9.653 4.44c.071.071.134.142.187.213h4.267a.836.836 0 0 1 .16-.213l2.853-2.747c.267-.249.573-.373.92-.373.347 0 .662.151.929.4.267.249.391.551.391.907 0 .355-.124.657-.373.906zM5.333 7.24c-.746.018-1.373.276-1.88.773-.506.498-.769 1.13-.786 1.894v7.52c.017.764.28 1.395.786 1.893.507.498 1.134.756 1.88.773h13.334c.746-.017 1.373-.275 1.88-.773.506-.498.769-1.129.786-1.893v-7.52c-.017-.765-.28-1.396-.786-1.894-.507-.497-1.134-.755-1.88-.773zM8 11.107c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373zm8 0c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373z" />
+                    </svg>
+                    <span>Bilibili</span>
+                </a>
+                <a href="#" aria-label="WeChat" title="WeChat: hackdeacon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.27-.027-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z" />
+                    </svg>
+                    <span>WeChat</span>
+                </a>
+                <a href="#" aria-label="WeChat Channels" title="WeChat Channels: hackdeacon">
+                    <svg viewBox="0 0 32 32" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M28.866 6.588c.953 2.305.236 6.813-.276 9.295-.773 3.749-2.017 7.482-3.17 9.512-.768 1.35-1.535 2.038-2.414 2.166-.141.02-.285.031-.427.031-2.598 0-5.071-3.392-6.58-5.976-1.507 2.584-3.98 5.976-6.578 5.976-.142 0-.286-.01-.427-.031-.879-.128-1.646-.817-2.413-2.166-1.154-2.03-2.398-5.763-3.171-9.512-.512-2.482-1.229-6.99-.276-9.295.692-1.671 1.847-2 2.474-2.047 2.33-.173 5.102 2.692 9.251 9.58.42.697.807 1.345 1.141 1.904.335-.562.723-1.21 1.14-1.903 3.965-6.581 6.66-9.492 8.936-9.586 1.303-.017 2.31.893 2.79 2.052zm-23.248 1.2c-.485 1.494-.11 5.343.939 9.515 1.02 4.051 2.123 6.337 2.699 7.205a.504.504 0 00.658.17c.508-.27 1.391-.981 2.668-2.838a31.488 31.488 0 001.844-3.085c-.408-.69-1.108-1.867-1.92-3.216C8.898 9.55 6.99 7.904 6.222 7.452c-.313-.184-.499.09-.604.336zm20.707-.156a.37.37 0 00-.54-.184c-.762.446-2.671 2.083-6.29 8.091a507.636 507.636 0 00-1.925 3.223c1.543 3.007 3.319 5.197 4.398 5.869a.593.593 0 00.815-.178c.58-.903 1.661-3.18 2.66-7.15 1.087-4.321 1.45-8.295.884-9.665l-.002-.006z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <span>Channels</span>
+                </a>
+                <a href="https://blog.hackdeacon.io" target="_blank" rel="noopener noreferrer" aria-label="Blog">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
+                    </svg>
+                    <span>Blog</span>
+                </a>
+                <a href="mailto:hello@hackdeacon.io" aria-label="Email">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M15.61 12c0 1.99-1.62 3.61-3.61 3.61-1.99 0-3.61-1.62-3.61-3.61 0-1.99 1.62-3.61 3.61-3.61 1.99 0 3.61 1.62 3.61 3.61M12 0C5.383 0 0 5.383 0 12s5.383 12 12 12c2.424 0 4.761-.722 6.76-2.087l.034-.024-1.617-1.879-.027.017A9.494 9.494 0 0 1 12 21.54c-5.26 0-9.54-4.28-9.54-9.54 0-5.26 4.28-9.54 9.54-9.54 5.26 0 9.54 4.28 9.54 9.54a9.63 9.63 0 0 1-.225 2.05c-.301 1.239-1.169 1.618-1.82 1.568-.654-.053-1.42-.52-1.426-1.661V12A6.076 6.076 0 0 0 12 5.93 6.076 6.076 0 0 0 5.93 12 6.076 6.076 0 0 0 12 18.07a6.02 6.02 0 0 0 4.3-1.792 3.9 3.9 0 0 0 3.32 1.805c.874 0 1.74-.292 2.437-.821.719-.547 1.256-1.336 1.553-2.285.047-.154.135-.504.135-.507l.002-.013c.175-.76.253-1.52.253-2.457 0-6.617-5.383-12-12-12" />
+                    </svg>
+                    <span>Email</span>
+                </a>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 hackdeacon. Stay simple, stay curious.</p>
+    </footer>
+</body>
+
+</html>
