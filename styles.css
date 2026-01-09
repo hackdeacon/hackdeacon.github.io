@@ -426,6 +426,8 @@ a, button, input, textarea {
     font-family: inherit;
     font-size: inherit;
     width: 100%;
+    /* Fix SVG clipping in WeChat browser */
+    overflow: visible;
 }
 
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
@@ -517,6 +519,10 @@ a, button, input, textarea {
     /* Fix SVG clipping in WeChat browser */
     overflow: visible;
     flex-shrink: 0;
+    /* Add padding around SVG to prevent edge clipping */
+    padding: 2px;
+    /* Ensure proper rendering in WeChat */
+    display: block;
 }
 
 @media (prefers-color-scheme: dark) {
