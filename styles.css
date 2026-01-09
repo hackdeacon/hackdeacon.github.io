@@ -1,19 +1,43 @@
 /* Critical CSS is inlined in HTML for faster first paint */
 
-/* Additional Dark Mode Variables */
+/* Extended CSS Variables */
+:root {
+    --focus-ring: 0 0 0 4px rgba(10, 132, 255, 0.25);
+    --selection-bg: rgba(10, 132, 255, 0.2);
+    --selection-text: #1d1d1f;
+}
+
 @media (prefers-color-scheme: dark) {
     :root {
         --focus-ring: 0 0 0 4px rgba(255, 92, 141, 0.25);
+        --selection-bg: rgba(255, 92, 141, 0.3);
+        --selection-text: #f5f5f7;
     }
-}
-
-/* Additional Light Mode Variables */
-:root {
-    --focus-ring: 0 0 0 4px rgba(10, 132, 255, 0.25);
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+/* Custom Text Selection */
+::selection {
+    background: var(--selection-bg);
+    color: var(--selection-text);
+}
+
+::-moz-selection {
+    background: var(--selection-bg);
+    color: var(--selection-text);
+}
+
+/* iOS Safe Area Support */
+@supports (padding: env(safe-area-inset-top)) {
+    body {
+        padding-top: env(safe-area-inset-top);
+        padding-bottom: env(safe-area-inset-bottom);
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -31,6 +55,11 @@ html {
 /* Extended body styles beyond critical CSS */
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    /* Prevent font scaling in landscape while allowing user zoom */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    /* Optimize touch scrolling on iOS */
+    -webkit-overflow-scrolling: touch;
 }
 
 /* Focus Styles */
@@ -45,27 +74,25 @@ button:focus-visible {
     outline: none;
 }
 
+/* Remove tap highlight on all interactive elements */
+a, button, input, textarea {
+    -webkit-tap-highlight-color: transparent;
+}
+
 .container {
     max-width: 980px;
     margin: 0 auto;
     padding: 0 22px;
 }
 
-/* Hero Section */
+/* Hero Section - extends critical CSS */
 .hero {
-    min-height: 100vh;
-    min-height: 100svh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     padding: 40px 22px;
 }
 
-@supports (height: 100dvh) {
+@supports (height: 100svh) {
     .hero {
-        min-height: 100dvh;
+        min-height: 100svh;
     }
 }
 
@@ -86,7 +113,7 @@ button:focus-visible {
 .hero h1 {
     font-size: clamp(48px, 6vw, 64px);
     font-weight: 800;
-    font-family: 'SF Mono', Monaco, Menlo, Consolas, 'Courier New', monospace;
+    font-family: ui-monospace, 'SF Mono', Monaco, Menlo, Consolas, 'Courier New', monospace;
     letter-spacing: -0.02em;
     line-height: 1;
     margin-bottom: 12px;
@@ -94,6 +121,9 @@ button:focus-visible {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    /* Prevent selection on hero title */
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -109,6 +139,8 @@ button:focus-visible {
     font-size: 21px;
     color: var(--text-secondary);
     font-weight: 400;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 /* About Section */
@@ -120,11 +152,12 @@ button:focus-visible {
 .lead {
     font-size: clamp(21px, 3vw, 28px);
     font-weight: 600;
-    text-align: center;
-    line-height: 1.4;
+    text-align: left;
+    line-height: 1.5;
     color: var(--text);
-    max-width: 800px;
+    max-width: 760px;
     margin: 0 auto;
+    letter-spacing: -0.01em;
 }
 
 /* Skills Section */
@@ -158,6 +191,11 @@ button:focus-visible {
     border: 1px solid var(--border);
     transition: all 0.45s cubic-bezier(0.25, 0.1, 0.25, 1);
     will-change: transform;
+    /* Performance optimizations */
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
 }
 
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
@@ -191,6 +229,8 @@ button:focus-visible {
 .skill-icon {
     font-size: 48px;
     margin-bottom: 20px;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .skill-card h3 {
@@ -236,6 +276,8 @@ button:focus-visible {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-bottom: 20px;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .current-card h3 {
@@ -278,6 +320,8 @@ button:focus-visible {
     font-weight: 600;
     color: var(--text-secondary);
     margin-bottom: 20px;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .project-card h3 {
@@ -301,6 +345,10 @@ button:focus-visible {
     position: relative;
     display: inline-block;
     transition: opacity 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+    /* Ensure minimum touch target size on mobile */
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
 }
 
 .link::after {
@@ -308,6 +356,8 @@ button:focus-visible {
     display: inline-block;
     margin-left: 4px;
     transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 @media (hover: hover) {
@@ -350,7 +400,8 @@ button:focus-visible {
     margin: 0 auto;
 }
 
-.social-links a {
+.social-links a,
+.social-links button {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -363,18 +414,94 @@ button:focus-visible {
     color: var(--text);
     transition: all 0.45s cubic-bezier(0.25, 0.1, 0.25, 1);
     will-change: transform;
+    /* Ensure minimum touch target size */
+    min-height: 88px;
+    /* Improve tap highlighting on mobile */
+    -webkit-tap-highlight-color: transparent;
+    /* Prevent text selection on touch */
+    -webkit-user-select: none;
+    user-select: none;
+    /* Button-specific resets */
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    width: 100%;
 }
 
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
-    .social-links a:hover {
+    .social-links a:hover,
+    .social-links button:hover {
         background: var(--bg-secondary);
         transform: scale(1.03);
     }
 
-    .social-links a:hover svg {
-        color: var(--accent);
+    .social-links a:hover svg,
+    .social-links button:hover svg {
         transform: scale(1.08);
         opacity: 1;
+    }
+
+    /* Platform-specific brand colors on hover */
+    .social-links a[data-platform="github"]:hover svg {
+        color: #181717;
+    }
+
+    .social-links a[data-platform="twitter"]:hover svg {
+        color: #1DA1F2;
+    }
+
+    .social-links a[data-platform="youtube"]:hover svg {
+        color: #FF0000;
+    }
+
+    .social-links a[data-platform="bilibili"]:hover svg {
+        color: #FB7299;
+    }
+
+    .social-links a[data-platform="wechat"]:hover svg,
+    .social-links button[data-platform="wechat"]:hover svg {
+        color: #07C160;
+    }
+
+    .social-links a[data-platform="channels"]:hover svg,
+    .social-links button[data-platform="channels"]:hover svg {
+        color: #fa9d3b;
+    }
+
+    .social-links a[data-platform="blog"]:hover svg {
+        color: #5C73E7;
+    }
+
+    .social-links a[data-platform="email"]:hover svg {
+        color: #005FF9;
+    }
+}
+
+/* Dark mode adjustments for platform colors */
+@media (prefers-color-scheme: dark) {
+    @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+        .social-links a[data-platform="github"]:hover svg {
+            color: #ffffff;
+        }
+    }
+}
+
+/* Touch feedback for mobile devices */
+@media (hover: none) {
+    .social-links a:active,
+    .social-links button:active {
+        transform: scale(0.97);
+        opacity: 0.8;
+    }
+
+    .skill-card:active,
+    .project-card:active {
+        transform: scale(0.98);
+        opacity: 0.9;
+    }
+
+    .link:active {
+        opacity: 0.6;
     }
 }
 
@@ -384,6 +511,9 @@ button:focus-visible {
     color: var(--text);
     opacity: 0.8;
     transition: all 0.45s cubic-bezier(0.25, 0.1, 0.25, 1);
+    pointer-events: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -398,6 +528,8 @@ button:focus-visible {
     color: var(--text);
     opacity: 0.9;
     transition: all 0.45s cubic-bezier(0.25, 0.1, 0.25, 1);
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 /* Footer */
@@ -458,6 +590,8 @@ footer p {
 
     .lead {
         font-size: 21px;
+        /* Improve readability on mobile */
+        line-height: 1.5;
     }
 
     .skills,
@@ -494,6 +628,7 @@ footer p {
 
     .current-card p {
         font-size: 17px;
+        line-height: 1.6;
     }
 
     .projects-grid {
@@ -505,8 +640,13 @@ footer p {
         padding: 32px 24px;
     }
 
+    .project-card p {
+        line-height: 1.6;
+    }
+
     .social-links {
         grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
     }
 
     .section-desc {
@@ -516,7 +656,7 @@ footer p {
 
 @media (max-width: 480px) {
     .hero {
-        padding: clamp(60px, 15vh, 100px) 22px;
+        padding: clamp(60px, 15vh, 100px) 20px;
     }
 
     .avatar {
@@ -535,14 +675,14 @@ footer p {
     }
 
     .about {
-        padding: clamp(40px, 8vh, 60px) 20px;
+        padding: clamp(40px, 8vh, 60px) 18px;
     }
 
     .skills,
     .current,
     .projects,
     .channels {
-        padding: clamp(40px, 8vh, 70px) 20px;
+        padding: clamp(40px, 8vh, 70px) 18px;
     }
 
     .skills h2,
@@ -555,6 +695,7 @@ footer p {
 
     .lead {
         font-size: 19px;
+        line-height: 1.55;
     }
 
     .skill-card {
@@ -573,12 +714,26 @@ footer p {
         font-size: 22px;
     }
 
+    .current-card p {
+        line-height: 1.65;
+    }
+
     .project-card {
         padding: 28px 20px;
     }
 
-    .social-links a {
+    .project-card p {
+        line-height: 1.65;
+    }
+
+    .social-links {
+        gap: 10px;
+    }
+
+    .social-links a,
+    .social-links button {
         padding: 20px 12px;
+        min-height: 84px;
     }
 }
 
@@ -622,5 +777,192 @@ footer p {
 
     .about {
         padding: clamp(80px, 12vh, 120px) 22px;
+    }
+}
+
+/* QR Code Modal - Apple Style */
+.qr-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    align-items: center;
+    justify-content: center;
+}
+
+.qr-modal.active {
+    opacity: 1;
+}
+
+.qr-modal-content {
+    position: relative;
+    width: min(440px, 90vw);
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 24px;
+    box-shadow:
+        0 0 0 0.5px rgba(0, 0, 0, 0.04),
+        0 30px 60px -15px rgba(0, 0, 0, 0.3),
+        0 0 100px rgba(0, 0, 0, 0.15);
+    transform: scale(0.94) translateY(20px);
+    opacity: 0;
+    transition: all 0.45s cubic-bezier(0.32, 0.72, 0, 1);
+    overflow: hidden;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.qr-modal.active .qr-modal-content {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+    .qr-modal-content {
+        background: rgba(28, 28, 30, 0.98);
+        box-shadow:
+            0 0 0 0.5px rgba(255, 255, 255, 0.08),
+            0 30px 60px -15px rgba(0, 0, 0, 0.6),
+            0 0 100px rgba(0, 0, 0, 0.4);
+    }
+}
+
+.qr-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: rgba(120, 120, 128, 0.12);
+    color: #666;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 10;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.qr-modal-close:hover {
+    background: rgba(120, 120, 128, 0.2);
+    transform: scale(1.08);
+}
+
+.qr-modal-close:active {
+    transform: scale(0.96);
+}
+
+.qr-modal-close svg {
+    width: 20px;
+    height: 20px;
+}
+
+@media (prefers-color-scheme: dark) {
+    .qr-modal-close {
+        background: rgba(120, 120, 128, 0.2);
+        color: #aaa;
+    }
+
+    .qr-modal-close:hover {
+        background: rgba(120, 120, 128, 0.32);
+        color: #fff;
+    }
+}
+
+.qr-modal-header {
+    padding: 32px 32px 20px;
+    text-align: center;
+}
+
+.qr-modal-title {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin: 0 0 8px;
+}
+
+.qr-modal-desc {
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+}
+
+.qr-image-wrapper {
+    padding: 0 32px 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.qr-image {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow:
+        0 0 0 0.5px rgba(0, 0, 0, 0.04),
+        0 8px 24px -8px rgba(0, 0, 0, 0.12);
+}
+
+@media (prefers-color-scheme: dark) {
+    .qr-image {
+        box-shadow:
+            0 0 0 0.5px rgba(255, 255, 255, 0.08),
+            0 8px 24px -8px rgba(0, 0, 0, 0.4);
+    }
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+    .qr-modal-content {
+        width: min(380px, 88vw);
+        border-radius: 20px;
+    }
+
+    .qr-modal-header {
+        padding: 28px 24px 16px;
+    }
+
+    .qr-modal-title {
+        font-size: 20px;
+    }
+
+    .qr-modal-desc {
+        font-size: 14px;
+    }
+
+    .qr-image-wrapper {
+        padding: 0 24px 28px;
+    }
+
+    .qr-image {
+        max-width: 280px;
+        border-radius: 14px;
+    }
+
+    .qr-modal-close {
+        width: 32px;
+        height: 32px;
+        top: 12px;
+        right: 12px;
+    }
+
+    .qr-modal-close svg {
+        width: 18px;
+        height: 18px;
     }
 }
