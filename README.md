@@ -1,42 +1,32 @@
-# hackdeacon.github.io
+# hackdeacon
 
-Personal portfolio built with vanilla web technologies. Clean, fast, minimal.
+Developer · Creator · Learner
 
-## Stack
+---
 
-- **Pure HTML/CSS/JS** — No frameworks, no build tools
-- **Apple Design Language** — System fonts, smooth animations, glassmorphism
-- **Mobile-First** — Optimized for all devices, including WeChat browser
+## Works
 
-## Features
+- **[HackStory](https://hackstory.cn/)**
+A blog based on vitepress.
 
-- **Critical CSS Inlining** — Sub-second first paint
-- **Dynamic QR Modals** — WeChat & Channels integration
-- **Cross-Browser SVG** — Viewport-adjusted for edge cases
-- **Dark Mode Native** — Respects system preferences
-- **Accessibility** — WCAG compliant, semantic HTML
+- **[HackGallery](https://img.hackdeacon.cn/)**
+A imgbed based on cloudflare.
 
-## Performance
+---
 
-```
-First Contentful Paint: < 0.8s
-Time to Interactive: < 1.2s
-Lighthouse Score: 95+
-```
+## Learning
 
-## Development
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Rust](https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white)
+![Swift](https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=swift&logoColor=white)
 
-```bash
-# Local server
-python3 -m http.server 8000
+---
 
-# Or use Live Server extension in VS Code
-```
+## Contact
 
-## Deployment
+[hello@hackdeacon.cn](mailto:hello@hackdeacon.cn)
 
-Auto-deploys to GitHub Pages on push to `main`.
+---
 
-## License
-
-MIT © 2026 hackdeacon
+`Create for passion`
