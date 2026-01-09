@@ -514,6 +514,9 @@ a, button, input, textarea {
     pointer-events: none;
     -webkit-user-select: none;
     user-select: none;
+    /* Fix SVG clipping in WeChat browser */
+    overflow: visible;
+    flex-shrink: 0;
 }
 
 @media (prefers-color-scheme: dark) {
