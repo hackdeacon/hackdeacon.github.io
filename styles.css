@@ -318,6 +318,7 @@ a, button, input, textarea {
 .project-number {
     font-size: 14px;
     font-weight: 600;
+    font-family: ui-monospace, 'SF Mono', Monaco, Menlo, Consolas, 'Courier New', monospace;
     color: var(--text-secondary);
     margin-bottom: 20px;
     -webkit-user-select: none;
@@ -327,6 +328,7 @@ a, button, input, textarea {
 .project-card h3 {
     font-size: 24px;
     font-weight: 600;
+    font-family: ui-rounded, 'SF Pro Rounded', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
     margin-bottom: 12px;
 }
 
@@ -468,12 +470,29 @@ a, button, input, textarea {
         color: #fa9d3b;
     }
 
-    .social-links a[data-platform="blog"]:hover svg {
-        color: #5C73E7;
+    .social-links a[data-platform="blog"]:hover svg path {
+        opacity: 1;
+    }
+
+    .social-links a[data-platform="blog"] .blog-gradient {
+        opacity: 0;
+        transition: opacity 0.45s cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+
+    .social-links a[data-platform="blog"] .blog-default {
+        transition: opacity 0.45s cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+
+    .social-links a[data-platform="blog"]:hover .blog-gradient {
+        opacity: 1;
+    }
+
+    .social-links a[data-platform="blog"]:hover .blog-default {
+        opacity: 0;
     }
 
     .social-links a[data-platform="email"]:hover svg {
-        color: #005FF9;
+        color: #EA4335;
     }
 }
 
