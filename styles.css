@@ -54,11 +54,8 @@ html {
 
 /* Extended body styles beyond critical CSS */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-    /* Prevent font scaling in landscape while allowing user zoom */
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
-    /* Optimize touch scrolling on iOS */
     -webkit-overflow-scrolling: touch;
 }
 
@@ -118,10 +115,9 @@ a, button, input, textarea {
     line-height: 1;
     margin-bottom: 12px;
     background: linear-gradient(180deg, #6e6e73 0%, #1d1d1f 50%, #6e6e73 100%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
-    /* Prevent selection on hero title */
     -webkit-user-select: none;
     user-select: none;
 }
@@ -129,9 +125,9 @@ a, button, input, textarea {
 @media (prefers-color-scheme: dark) {
     .hero h1 {
         background: linear-gradient(180deg, #86868b 0%, #f5f5f7 50%, #86868b 100%);
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        background-clip: text;
     }
 }
 
@@ -345,12 +341,10 @@ a, button, input, textarea {
     font-size: 17px;
     font-weight: 500;
     position: relative;
-    display: inline-block;
-    transition: opacity 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
-    /* Ensure minimum touch target size on mobile */
     min-height: 44px;
     display: inline-flex;
     align-items: center;
+    transition: opacity 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .link::after {
@@ -414,20 +408,16 @@ a, button, input, textarea {
     border-radius: 16px;
     text-decoration: none;
     color: var(--text);
-    transition: all 0.45s cubic-bezier(0.25, 0.1, 0.25, 1);
-    will-change: transform;
-    /* Ensure minimum touch target size */
     min-height: 88px;
-    /* Improve tap highlighting on mobile */
-    -webkit-tap-highlight-color: transparent;
-    /* Prevent text selection on touch */
-    -webkit-user-select: none;
-    user-select: none;
-    /* Button-specific resets */
+    width: 100%;
     cursor: pointer;
     font-family: inherit;
     font-size: inherit;
-    width: 100%;
+    transition: all 0.45s cubic-bezier(0.25, 0.1, 0.25, 1);
+    will-change: transform;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
@@ -474,13 +464,13 @@ a, button, input, textarea {
         opacity: 1;
     }
 
-    .social-links a[data-platform="blog"] .blog-gradient {
-        opacity: 0;
+    .social-links a[data-platform="blog"] .blog-gradient,
+    .social-links a[data-platform="blog"] .blog-default {
         transition: opacity 0.45s cubic-bezier(0.25, 0.1, 0.25, 1);
     }
 
-    .social-links a[data-platform="blog"] .blog-default {
-        transition: opacity 0.45s cubic-bezier(0.25, 0.1, 0.25, 1);
+    .social-links a[data-platform="blog"] .blog-gradient {
+        opacity: 0;
     }
 
     .social-links a[data-platform="blog"]:hover .blog-gradient {
@@ -527,19 +517,16 @@ a, button, input, textarea {
 .social-links svg {
     width: 28px;
     height: 28px;
+    padding: 2px;
     color: var(--text);
     opacity: 0.7;
-    transition: all 0.45s cubic-bezier(0.25, 0.1, 0.25, 1);
-    pointer-events: none;
-    -webkit-user-select: none;
-    user-select: none;
-    /* Fix SVG clipping in WeChat browser */
     overflow: visible;
     flex-shrink: 0;
-    /* Add padding around SVG to prevent edge clipping */
-    padding: 2px;
-    /* Ensure proper rendering in WeChat */
     display: block;
+    pointer-events: none;
+    transition: all 0.45s cubic-bezier(0.25, 0.1, 0.25, 1);
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 @media (prefers-color-scheme: dark) {
