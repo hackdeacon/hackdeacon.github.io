@@ -464,15 +464,6 @@ a, button, input, textarea {
         opacity: 1;
     }
 
-    .social-links a[data-platform="blog"] .blog-gradient,
-    .social-links a[data-platform="blog"] .blog-default {
-        transition: opacity 0.45s cubic-bezier(0.25, 0.1, 0.25, 1);
-    }
-
-    .social-links a[data-platform="blog"] .blog-gradient {
-        opacity: 0;
-    }
-
     .social-links a[data-platform="blog"]:hover .blog-gradient {
         opacity: 1;
     }
@@ -484,6 +475,16 @@ a, button, input, textarea {
     .social-links a[data-platform="email"]:hover svg {
         color: #EA4335;
     }
+}
+
+/* Blog gradient toggle - applies to all devices */
+.social-links a[data-platform="blog"] .blog-gradient,
+.social-links a[data-platform="blog"] .blog-default {
+    transition: opacity 0.45s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.social-links a[data-platform="blog"] .blog-gradient {
+    opacity: 0;
 }
 
 /* Dark mode adjustments for platform colors */
