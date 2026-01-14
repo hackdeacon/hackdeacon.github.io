@@ -1,32 +1,7 @@
 # hackdeacon
 
-Developer · Creator · Learner
+My name is Ringo. I am an Indie Hacker and Content Creator passionate about exploring cutting-edge technology and hardware, making me a dedicated Tech Enthusiast.
 
----
+I strive to imbue my creations with peak performance, elegant design, and intuitive interactions.
 
-## Works
-
-- **[HackStory](https://hackstory.cn/)**
-A blog based on vitepress.
-
-- **[HackGallery](https://img.hackdeacon.cn/)**
-A imgbed based on cloudflare.
-
----
-
-## Learning
-
-![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![Rust](https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white)
-![Swift](https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=swift&logoColor=white)
-
----
-
-## Contact
-
-[hello@hackdeacon.cn](mailto:hello@hackdeacon.cn)
-
----
-
-`Create for passion`
+Driven by inspiration, I develop practical apps and share intriguing discoveries. Through writing and visual storytelling, I document my personal growth while seeking resonance with world culture.
