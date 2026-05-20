@@ -5,6 +5,8 @@
     --focus-ring: 0 0 0 4px rgba(10, 132, 255, 0.25);
     --selection-bg: rgba(10, 132, 255, 0.2);
     --selection-text: #1d1d1f;
+    --ease-standard: cubic-bezier(0.25, 0.1, 0.25, 1);
+    --font-mono: ui-monospace, 'SF Mono', Monaco, Menlo, Consolas, 'Courier New', monospace;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,11 +23,6 @@ html {
 
 /* Custom Text Selection */
 ::selection {
-    background: var(--selection-bg);
-    color: var(--selection-text);
-}
-
-::-moz-selection {
     background: var(--selection-bg);
     color: var(--selection-text);
 }
@@ -56,7 +53,6 @@ html {
 body {
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
-    -webkit-overflow-scrolling: touch;
 }
 
 /* Focus Styles */
@@ -113,7 +109,7 @@ a, button, input, textarea {
 .hero h1 {
     font-size: clamp(48px, 6vw, 64px);
     font-weight: 800;
-    font-family: ui-monospace, 'SF Mono', Monaco, Menlo, Consolas, 'Courier New', monospace;
+    font-family: var(--font-mono);
     letter-spacing: -0.02em;
     line-height: 1;
     margin-bottom: 12px;
@@ -160,17 +156,32 @@ a, button, input, textarea {
 }
 
 /* Skills Section */
-.skills {
+.skills,
+.current,
+.projects,
+.channels {
     padding: clamp(80px, 12vh, 120px) 22px;
 }
 
-.skills h2 {
+.skills h2,
+.current h2,
+.projects h2,
+.channels h2 {
     font-size: 48px;
     font-weight: 600;
     text-align: center;
-    margin-bottom: 60px;
     letter-spacing: -0.02em;
     line-height: 1.1;
+}
+
+.skills h2,
+.current h2,
+.projects h2 {
+    margin-bottom: 60px;
+}
+
+.channels h2 {
+    margin-bottom: 16px;
 }
 
 .skills-grid {
@@ -188,19 +199,19 @@ a, button, input, textarea {
     background: var(--card-bg);
     border-radius: 24px;
     border: 1px solid var(--border);
-    transition: all 0.45s cubic-bezier(0.25, 0.1, 0.25, 1);
-    will-change: transform;
-    /* Performance optimizations */
+    padding: 40px 32px;
+    transition: transform 0.45s var(--ease-standard),
+                border-color 0.45s var(--ease-standard),
+                box-shadow 0.45s var(--ease-standard);
     backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
     transform: translateZ(0);
-    -webkit-transform: translateZ(0);
 }
 
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
 
     .skill-card:hover,
     .project-card:hover {
+        will-change: transform;
         transform: scale(1.02);
         border-color: rgba(10, 132, 255, 0.3);
         box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04), 0 8px 32px rgba(0, 0, 0, 0.04);
@@ -217,12 +228,7 @@ a, button, input, textarea {
 }
 
 .skill-card {
-    padding: 40px 32px;
     text-align: center;
-}
-
-.project-card {
-    padding: 40px 32px;
 }
 
 .skill-icon {
@@ -245,17 +251,7 @@ a, button, input, textarea {
 
 /* Current Section */
 .current {
-    padding: clamp(80px, 12vh, 120px) 22px;
     background: var(--bg-secondary);
-}
-
-.current h2 {
-    font-size: 48px;
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 60px;
-    letter-spacing: -0.02em;
-    line-height: 1.1;
 }
 
 .current-card {
@@ -293,19 +289,6 @@ a, button, input, textarea {
 }
 
 /* Projects Section */
-.projects {
-    padding: clamp(80px, 12vh, 120px) 22px;
-}
-
-.projects h2 {
-    font-size: 48px;
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 60px;
-    letter-spacing: -0.02em;
-    line-height: 1.1;
-}
-
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -317,7 +300,7 @@ a, button, input, textarea {
 .project-number {
     font-size: 14px;
     font-weight: 600;
-    font-family: ui-monospace, 'SF Mono', Monaco, Menlo, Consolas, 'Courier New', monospace;
+    font-family: var(--font-mono);
     color: var(--text-secondary);
     margin-bottom: 20px;
     -webkit-user-select: none;
@@ -347,14 +330,14 @@ a, button, input, textarea {
     min-height: 44px;
     display: inline-flex;
     align-items: center;
-    transition: opacity 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: opacity 0.4s var(--ease-standard);
 }
 
 .link::after {
     content: '→';
     display: inline-block;
     margin-left: 4px;
-    transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: transform 0.5s var(--ease-standard);
     -webkit-user-select: none;
     user-select: none;
 }
@@ -371,17 +354,7 @@ a, button, input, textarea {
 
 /* Channels Section */
 .channels {
-    padding: clamp(80px, 12vh, 120px) 22px;
     background: var(--bg-secondary);
-}
-
-.channels h2 {
-    font-size: 48px;
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 16px;
-    letter-spacing: -0.02em;
-    line-height: 1.1;
 }
 
 .section-desc {
@@ -416,8 +389,8 @@ a, button, input, textarea {
     cursor: pointer;
     font-family: inherit;
     font-size: inherit;
-    transition: all 0.45s cubic-bezier(0.25, 0.1, 0.25, 1);
-    will-change: transform;
+    transition: transform 0.45s var(--ease-standard),
+                background 0.45s var(--ease-standard);
     -webkit-tap-highlight-color: transparent;
     -webkit-user-select: none;
     user-select: none;
@@ -426,6 +399,7 @@ a, button, input, textarea {
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
     .social-links a:hover,
     .social-links button:hover {
+        will-change: transform;
         background: var(--bg-secondary);
         transform: scale(1.03);
     }
@@ -483,7 +457,7 @@ a, button, input, textarea {
 /* Blog gradient toggle - applies to all devices */
 .social-links a[data-platform="blog"] .blog-gradient,
 .social-links a[data-platform="blog"] .blog-default {
-    transition: opacity 0.45s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: opacity 0.45s var(--ease-standard);
 }
 
 .social-links a[data-platform="blog"] .blog-gradient {
@@ -528,7 +502,9 @@ a, button, input, textarea {
     flex-shrink: 0;
     display: block;
     pointer-events: none;
-    transition: all 0.45s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: color 0.45s var(--ease-standard),
+                transform 0.45s var(--ease-standard),
+                opacity 0.45s var(--ease-standard);
     -webkit-user-select: none;
     user-select: none;
 }
@@ -544,7 +520,8 @@ a, button, input, textarea {
     font-weight: 500;
     color: var(--text);
     opacity: 0.75;
-    transition: all 0.45s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: color 0.45s var(--ease-standard),
+                opacity 0.45s var(--ease-standard);
     -webkit-user-select: none;
     user-select: none;
 }

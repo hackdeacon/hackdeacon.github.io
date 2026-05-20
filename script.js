@@ -42,10 +42,8 @@ function hideModal() {
     elements.modal.classList.remove('active');
 
     setTimeout(() => {
-        if (!elements.modal.classList.contains('active')) {
-            elements.modal.style.display = 'none';
-            document.body.style.overflow = '';
-        }
+        elements.modal.style.display = 'none';
+        document.body.style.overflow = '';
     }, ANIMATION_DURATION);
 }
 
