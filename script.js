@@ -42,8 +42,10 @@ function hideModal() {
     elements.modal.classList.remove('active');
 
     setTimeout(() => {
-        elements.modal.style.display = 'none';
-        document.body.style.overflow = '';
+        if (!elements.modal.classList.contains('active')) {
+            elements.modal.style.display = 'none';
+            document.body.style.overflow = '';
+        }
     }, ANIMATION_DURATION);
 }
 
@@ -57,7 +59,5 @@ elements.modal?.addEventListener('click', (e) => {
 });
 
 document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && elements.modal?.classList.contains('active')) {
-        hideModal();
-    }
+    if (e.key === 'Escape') hideModal();
 });
