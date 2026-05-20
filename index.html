@@ -15,21 +15,28 @@
     <meta name="keywords" content="hackdeacon, 天麟, 独立开发者, 自媒体创作者, 科技数码, developer, content creator, tech enthusiast">
     <meta name="author" content="hackdeacon">
     <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://hackdeacon.cn/">
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://hackdeacon.github.io/">
+    <meta property="og:url" content="https://hackdeacon.cn/">
     <meta property="og:title" content="hackdeacon">
     <meta property="og:description"
         content="独立开发者与自媒体创作者，热爱探索前沿技术与硬件。追求极致性能、优雅设计和人性化交互，用代码、文字和镜头记录创作历程。">
     <meta property="og:image" content="https://rz.hackdeacon.cn/hotlink-ok/Warm_Woodlight.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="hackdeacon - Developer, Creator, Techie">
+    <meta property="og:site_name" content="hackdeacon">
+    <meta property="og:locale" content="zh_CN">
 
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://hackdeacon.github.io/">
+    <meta property="twitter:url" content="https://hackdeacon.cn/">
     <meta property="twitter:title" content="hackdeacon">
     <meta property="twitter:description"
         content="独立开发者与自媒体创作者，热爱探索前沿技术与硬件。追求极致性能、优雅设计和人性化交互，用代码、文字和镜头记录创作历程。">
     <meta property="twitter:image" content="https://rz.hackdeacon.cn/hotlink-ok/Warm_Woodlight.webp">
     <meta name="twitter:creator" content="@hackdeacon">
+    <meta name="twitter:site" content="@hackdeacon">
 
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
@@ -98,17 +105,69 @@
 
     <link rel="preload" href="styles.css" as="style">
     <link rel="stylesheet" href="styles.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Person",
+                "@id": "https://hackdeacon.cn/#person",
+                "name": "hackdeacon",
+                "alternateName": "Ringo",
+                "url": "https://hackdeacon.cn/",
+                "image": "https://pic.hackdeacon.cn/hack-640.webp",
+                "description": "独立开发者与自媒体创作者，热爱探索前沿技术与硬件。追求极致性能、优雅设计和人性化交互，用代码、文字和镜头记录创作历程。",
+                "jobTitle": "Indie Developer & Content Creator",
+                "email": "hello@hackdeacon.cn",
+                "sameAs": [
+                    "https://github.com/hackdeacon",
+                    "https://x.com/hackdeacon",
+                    "https://youtube.com/@hackdeacon",
+                    "https://space.bilibili.com/287107582",
+                    "https://hackstory.cn"
+                ]
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://hackdeacon.cn/#website",
+                "name": "hackdeacon",
+                "url": "https://hackdeacon.cn/",
+                "publisher": {
+                    "@id": "https://hackdeacon.cn/#person"
+                },
+                "inLanguage": "zh-CN"
+            },
+            {
+                "@type": "ProfilePage",
+                "@id": "https://hackdeacon.cn/#profilepage",
+                "url": "https://hackdeacon.cn/",
+                "name": "hackdeacon - Developer, Creator, Techie",
+                "isPartOf": {
+                    "@id": "https://hackdeacon.cn/#website"
+                },
+                "mainEntity": {
+                    "@id": "https://hackdeacon.cn/#person"
+                },
+                "inLanguage": "zh-CN"
+            }
+        ]
+    }
+    </script>
 </head>
 
 <body>
-    <section class="hero">
-        <img src="https://pic.hackdeacon.cn/hack-640.webp" class="avatar" alt="hackdeacon profile picture" width="120"
-            height="120" loading="eager" fetchpriority="high" decoding="async">
-        <h1>hackdeacon</h1>
-        <p class="subtitle">Developer · Creator · Techie</p>
-    </section>
+    <header>
+        <section class="hero">
+            <img src="https://pic.hackdeacon.cn/hack-640.webp" class="avatar" alt="hackdeacon profile picture" width="120"
+                height="120" loading="eager" fetchpriority="high" decoding="async">
+            <h1>hackdeacon</h1>
+            <p class="subtitle">Developer · Creator · Techie</p>
+        </section>
+    </header>
 
-    <section class="about" id="main-content">
+    <main id="main-content">
+    <section class="about">
         <div class="container">
             <p class="lead">
                 我是 Ringo，一名独立开发者和自媒体创作者，热爱探索前沿技术与硬件，因此也是一位科技数码爱好者。
@@ -271,6 +330,7 @@
             </nav>
         </div>
     </section>
+    </main>
 
     <footer>
         <p>Copyright © 2026 Ringo. All rights reserved.</p>
