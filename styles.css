@@ -952,3 +952,22 @@ footer p {
         height: 18px;
     }
 }
+
+/* squircle 不支持时，用稍小的 border-radius 回退，视觉更接近 */
+@supports not (corner-shape: squircle) {
+    button:focus-visible {
+        border-radius: 12px;
+    }
+    .links-card {
+        border-radius: 36px;
+    }
+    .link-item {
+        border-radius: 24px;
+    }
+    .qr-card {
+        border-radius: 34px;
+    }
+    .qrcode-box {
+        border-radius: 24px;
+    }
+}
