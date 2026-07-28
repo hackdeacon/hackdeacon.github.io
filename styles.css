@@ -81,6 +81,13 @@ a, button, input, textarea {
 /* Hero Section - extends critical CSS */
 .hero {
     padding: 40px 22px;
+    background: #fafafa;
+}
+
+@media (prefers-color-scheme: dark) {
+    .hero {
+        background: #161616;
+    }
 }
 
 @supports (height: 100svh) {
