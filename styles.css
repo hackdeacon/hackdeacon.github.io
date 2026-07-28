@@ -411,7 +411,7 @@ a, button, input, textarea {
 
     /* Platform-specific brand colors on hover */
     .social-links a[data-platform="github"]:hover svg {
-        color: #181717;
+        color: #8534F3;
     }
 
     .social-links a[data-platform="twitter"]:hover svg {
@@ -467,7 +467,7 @@ a, button, input, textarea {
 @media (prefers-color-scheme: dark) {
     @media (hover: hover) and (prefers-reduced-motion: no-preference) {
         .social-links a[data-platform="github"]:hover svg {
-            color: #ffffff;
+            color: #0FBF3E;
         }
     }
 }
