@@ -1,12 +1,12 @@
 // QR Code Modal Configuration
 const QR_CONFIG = {
     wechat: {
-        image: 'https://pic.hackdeacon.cn/Official-Account.jpg',
+        image: 'https://rz.hackdeacon.cn/Official-Account.jpg',
         title: 'WeChat Official Account',
         desc: 'Scan to follow me on WeChat'
     },
     channels: {
-        image: 'https://pic.hackdeacon.cn/Channels.jpg',
+        image: 'https://rz.hackdeacon.cn/Channels.jpg',
         title: 'WeChat Channels',
         desc: 'Scan to follow my video channel'
     }
