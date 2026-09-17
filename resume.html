@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>黑衣执事 · 个人简历</title>
+    <meta name="description"
+        content="黑衣执事（hackdeacon）的在线个人简历。Web 全栈开发工程师与 AI 内容创作者，专注于 React/Next.js、TypeScript、Node.js、Cloudflare 边缘计算与 LLM 智能体应用开发。">
+    <meta name="keywords" content="黑衣执事, hackdeacon, 邱天麟, 个人简历, 全栈工程师, 独立开发者, 前端开发, AI应用, Resume">
+    <meta name="author" content="黑衣执事 hackdeacon">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://hackdeacon.cn/resume.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://hackdeacon.cn/resume.html">
+    <meta property="og:title" content="黑衣执事 | 个人简历">
+    <meta property="og:description"
+        content="黑衣执事（hackdeacon）的在线个人简历。Web 全栈开发 · AI 技术内容编辑 · AI 新媒体运营。">
+    <meta property="og:image" content="https://rz.hackdeacon.cn/hack-640.webp">
+
+    <meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="https://rz.hackdeacon.cn/hack.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://rz.hackdeacon.cn/hack.png">
+    <link rel="shortcut icon" href="https://rz.hackdeacon.cn/hack.png">
+    <link rel="apple-touch-icon" href="https://rz.hackdeacon.cn/hack.png">
+
+    <!-- Tabler Icons CDN -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+
+    <link rel="stylesheet" href="resume.css">
+
+    <!-- Prevent Theme Flash -->
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('resume-theme');
+            if (savedTheme) {
+                document.documentElement.setAttribute('data-theme', savedTheme);
+            }
+        })();
+    </script>
+</head>
+
+<body>
+    <!-- Main Resume Paper (Data-driven rendered by resume.js from resume.json) -->
+    <main class="resume-container">
+        <article class="resume-paper" id="resumeApp">
+            <!-- Loading placeholder -->
+            <div style="padding: 40px; text-align: center; color: var(--text-secondary); font-size: 15px;">
+                正在加载简历数据...
+            </div>
+        </article>
+    </main>
+
+    <!-- Toast Notification -->
+    <div class="toast-container" id="toastBox">
+        <i class="ti ti-circle-check"></i>
+        <span id="toastMessage">已复制到剪贴板</span>
+    </div>
+
+    <!-- Resume Dynamic Renderer -->
+    <script src="resume.js?v=5" defer></script>
+</body>
+
+</html>

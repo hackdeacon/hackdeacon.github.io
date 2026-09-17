@@ -1,0 +1,255 @@
+{
+  "basic": {
+    "name": "黑衣执事",
+    "realName": "邱天麟",
+    "alias": "hackdeacon",
+    "avatar": "https://rz.hackdeacon.cn/hack-640.webp",
+    "status": "积极寻找新机会 · 随时到岗 · 支持远程",
+    "tag": "22 岁 · 26 届毕业生",
+    "headline": "Web 全栈开发 · AI 技术内容编辑 · AI 新媒体运营",
+    "contacts": [
+      {
+        "type": "location",
+        "icon": "ti-map-pin",
+        "label": "汕头 / 广州 / 深圳"
+      },
+      {
+        "type": "email",
+        "icon": "ti-mail",
+        "label": "hackdeacon@gmail.com",
+        "href": "mailto:hackdeacon@gmail.com",
+        "copyable": true
+      },
+      {
+        "type": "wechat",
+        "icon": "ti-brand-wechat",
+        "label": "GotoVlog",
+        "prefix": "",
+        "copyable": true
+      },
+      {
+        "type": "link",
+        "icon": "ti-world",
+        "label": "个人主页",
+        "href": "https://hackdeacon.cn"
+      },
+      {
+        "type": "link",
+        "icon": "ti-book",
+        "label": "Blog",
+        "href": "https://hackstory.cn"
+      },
+      {
+        "type": "link",
+        "icon": "ti-brand-github",
+        "label": "GitHub",
+        "href": "https://github.com/hackdeacon"
+      }
+    ]
+  },
+  "summary": {
+    "title": "个人简介 & 核心优势",
+    "icon": "ti-user",
+    "content": "具备 <strong>Web 全栈开发</strong> 实践经验，能够使用 AI Coding 工具辅助完成产品开发、调试与迭代。<br>长期关注 <strong>LLM、Harness、Agent</strong> 等前沿内容，对 AI 产品有较丰富的体验和研究兴趣。<br>同时具备 <strong>AI 技术内容创作</strong> 与 <strong>新媒体运营经验</strong>，能够从技术研究、产品体验中提炼选题，完成内容策划、撰写、编辑及多平台发布。",
+    "highlights": [
+      {
+        "icon": "ti-bolt",
+        "title": "Web 全栈开发",
+        "desc": "专注现代 Web 开发，具备企业级与个人项目实践经验，熟悉移动端适配、i18n 国际化及微信小程序开发流程。独立搭建个人主页、博客、图床等项目，具备 Git、Cloudflare、Linux VPS 及项目部署运维经验。"
+      },
+      {
+        "icon": "ti-robot",
+        "title": "AI Coding",
+        "desc": "深入 LLM 生态，熟悉 Prompt 工程，熟练使用 Codex、Claude Code、OpenCode、DeepSeek Harness 等 Agent 产品，拥有完整的 AI 产品开发交付经历。"
+      },
+      {
+        "icon": "ti-movie",
+        "title": "公众号运营",
+        "desc": "独立运营微信公众号，负责选题策划、内容创作、编辑发布及数据复盘，持续输出 AI、科技与产品相关内容，累计发布 50+ 篇，其中 10+ 篇单篇阅读量破万。"
+      }
+    ]
+  },
+  "skills": {
+    "title": "专业技术栈",
+    "icon": "ti-code",
+    "badge": "Skill Matrix",
+    "categories": [
+      {
+        "name": "前端开发",
+        "icon": "ti-device-desktop",
+        "tags": [
+          "HTML",
+          "CSS",
+          "TypeScript",
+          "Vue",
+          "React"
+        ],
+        "desc": "前后端分离开发，组件化开发，移动端适配，国际化。"
+      },
+      {
+        "name": "后端与云原生",
+        "icon": "ti-server",
+        "tags": [
+          "Node.js",
+          "Python",
+          "Cloudflare",
+          "Vercel",
+          "GitHub",
+          "EdgeOne",
+          "Supabase",
+          "数据库"
+        ],
+        "desc": "熟悉版本控制，云部署，数据库表结构，低代码后端。"
+      },
+      {
+        "name": "AI & LLM",
+        "icon": "ti-brain",
+        "tags": [
+          "Skills 技能封装",
+          "Prompt 提示词工程",
+          "Agent 智能体工作流",
+          "LLM API / 本地部署",
+          "Harness 工程"
+        ],
+        "desc": "有 Agent Skills 工作流开发经验，熟悉 Harness 工程。"
+      },
+      {
+        "name": "全媒体运营",
+        "icon": "ti-palette",
+        "tags": [
+          "微信公众号",
+          "知乎",
+          "小红书",
+          "Twitter / X",
+          "微信视频号 / 抖音 / B 站"
+        ],
+        "desc": "从选题到发布全流程，熟悉各平台内容形式，热爱内容输出，有一定的自媒体相关经验。熟悉摄影，封面制作，后期剪辑，数据复盘。"
+      }
+    ]
+  },
+  "experiences": {
+    "title": "工作与实践经历",
+    "icon": "ti-briefcase",
+    "badge": "Career Journey",
+    "list": [
+      {
+        "role": "AI 内容创作者",
+        "company": "一家上海自媒体创业公司",
+        "date": "2026.08",
+        "location": "上海 · 静安",
+        "points": [
+          "<strong>图文内容创作</strong>：负责微信公众号的长短图文内容输出，内容方向主要为 AI Coding 工具教程、模型测评、开发经验分享等。<br>在职期间发布类似以下选题文章：<br>DeepSeek Harness 保姆级服务器部署教程<br>DeepSeek V4 Flash Vision Exp 模型识图能力评测<br>Anthropic 经验分享：去掉 80% 提示词后模型的能力表现<br>Anthropic 内部实践：打造一支高效的 Agent 团队",
+          "<strong>Agent Skills 工作流</strong>：将固定工作流封装成 Skills 提高产出效率。",
+          "<strong>内容引流</strong>：在知乎平台为 AI 相关问题撰写有质量、带观点的回答，并将流量转化。"
+        ]
+      },
+      {
+        "role": "前端开发（非雇用关系）",
+        "company": "一家粤港澳大湾区的高端人脉互联平台",
+        "date": "2026.02",
+        "location": "远程",
+        "points": [
+          "<strong>平台 Web 端页面开发</strong>：根据产品需求、产品原型，从 0 到 1 完成平台官网开发。用到的技术栈为 Vue，借助 AI Coding 工具辅助开发。",
+          "<strong>小程序开发</strong>：平台功能移动端适配，接入微信小程序。"
+        ]
+      },
+      {
+        "role": "前端开发（实习）",
+        "company": "一家广州教育平台",
+        "date": "2025.09 - 2025.12",
+        "location": "广东 · 珠海",
+        "points": [
+          "<strong>AI 教学平台开发</strong>：根据产品需求、产品原型，完成平台账号注册登录、知识图谱、课程学习页面等相关内容开发。用到的技术栈为 uni-app，借助 AI Coding 工具辅助开发。",
+          "<strong>平台国际化多语言适配</strong>：使用 vue-i18n 相关库完成平台多种语言适配。",
+          "<strong>平台移动端适配</strong>：适配移动端页面及交互逻辑。"
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "个人项目",
+    "icon": "ti-sparkles",
+    "badge": "Crafted Works",
+    "list": [
+      {
+        "title": "KirinGo 麒麟智聘 · 基于 LLM 的智能求职招聘平台",
+        "type": "毕业设计",
+        "link": "https://kiringo.cn",
+        "linkLabel": "访问项目",
+        "link2": "https://github.com/hackdeacon/KirinGo",
+        "link2Label": "GitHub",
+        "desc": "面向求职者与招聘者构建的 AI 智能招聘平台，覆盖简历管理、职位发布与搜索、AI 简历解析与优化、语义职位匹配、AI 模拟面试、投递管理及实时沟通等核心场景。",
+        "achievements": [
+          "<strong>AI 简历优化</strong>：自动提取个人信息、教育经历、工作经验、项目经历及技能；基于目标职位从结构、匹配度、关键词、表达四个维度进行分析并生成优化建议。",
+          "<strong>AI 职位匹配</strong>：利用 Embedding 将简历与职位描述向量化，结合 PostgreSQL pgvector 进行语义相似度检索，再通过 AI 对匹配结果进行优势、不足及建议分析。",
+          "<strong>AI 模拟面试</strong>：根据目标职位生成技术、行为及综合面试问题，支持流式 AI 对话、连续追问，并从技术能力、项目经验、表达能力及简历匹配等维度生成面试评估。"
+        ],
+        "tags": [
+          "Vue",
+          "TypeScript",
+          "Supabase",
+          "PostgreSQL",
+          "pgvector",
+          "Tailwind CSS"
+        ]
+      },
+      {
+        "title": "Haclutch · 无畏契约电竞赛事数据面板",
+        "type": "API + 原生开发",
+        "link": "https://v.hackdeacon.cn",
+        "linkLabel": "访问项目",
+        "link2": "https://vct.hackdeacon.cn",
+        "link2Label": "小程序",
+        "desc": "专为无畏契约（VALORANT）电竞爱好者设计的专业赛事看板，提供实时赛况追踪、战队对阵图谱与选手多维战绩数据分析。",
+        "achievements": [
+          "<strong>赛事数据</strong>：赛事、比赛、战队、选手及排行榜查询，整合多源 API，采用 Hash SPA 路由实现页面切换。",
+          "<strong>数据统计</strong>：选手数据统计及多条件筛选，基于原生 JavaScript 实现多条件排序、图片懒加载。",
+          "<strong>性能</strong>：localStorage + TTL 实现数据缓存，适配响应式布局与暗色模式，并通过 Vercel 部署。"
+        ],
+        "tags": [
+          "微信小程序",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Python",
+          "Vercel"
+        ]
+      },
+      {
+        "title": "HackStory 黑胶故事 · 个人技术博客",
+        "type": "技术分享 / 经验积累",
+        "link": "https://hackstory.cn",
+        "linkLabel": "访问博客",
+        "link2": "https://github.com/hackdeacon/HackStory",
+        "link2Label": "GitHub",
+        "desc": "以技术沉淀与经验复盘为主旨的现代化静态数字花园，记录在全栈开发、AI 探索与数码创作中的深层思考。",
+        "achievements": [
+          "<strong>内容管理</strong>：个人博客、生活作品、技术作品、生活记录及技术笔记分类展示，基于 VitePress + Markdown 构建。",
+          "<strong>主题交互</strong>：自定义 VitePress Theme 与 CSS，实现响应式布局、深色模式及个人化视觉样式。",
+          "<strong>工程化部署</strong>：通过 GitHub Actions 自动构建 VitePress 站点并部署至 GitHub Pages，实现提交代码后的持续部署。"
+        ],
+        "tags": [
+          "VitePress"
+        ]
+      }
+    ]
+  },
+  "education": {
+    "title": "教育背景",
+    "icon": "ti-school",
+    "list": [
+      {
+        "major": "广东科学技术职业学院",
+        "time": "2023.09 - 2026.06",
+        "degree": "专科",
+        "desc": "计算机工程技术学院（人工智能学院），主攻前端开发。",
+        "certificates": [
+          "广东省职业院校技能大赛 · 应用软件系统开发 · 省赛一等奖",
+          "大学英语四级",
+          "计算机二级",
+          "普通话二级乙等"
+        ]
+      }
+    ]
+  }
+}

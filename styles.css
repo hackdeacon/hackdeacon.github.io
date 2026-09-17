@@ -261,6 +261,7 @@ a, button, input, textarea {
 }
 
 .current-card {
+    position: relative;
     padding: 48px 40px;
     max-width: 800px;
     margin: 0 auto;
@@ -292,6 +293,12 @@ a, button, input, textarea {
     font-size: 19px;
     line-height: 1.6;
     color: var(--text-secondary);
+}
+
+.current-card .link {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
 }
 
 /* Projects Section */
@@ -627,6 +634,11 @@ footer p {
         line-height: 1.6;
     }
 
+    .current-card .link {
+        bottom: 24px;
+        right: 24px;
+    }
+
     .projects-grid {
         grid-template-columns: 1fr;
         gap: 16px;
@@ -706,6 +718,11 @@ footer p {
 
     .current-card p {
         line-height: 1.65;
+    }
+
+    .current-card .link {
+        bottom: 20px;
+        right: 20px;
     }
 
     .project-card p {
