@@ -389,8 +389,8 @@
       {
         "type": "email",
         "icon": "ti-mail",
-        "label": "hackdeacon@gmail.com",
-        "href": "mailto:hackdeacon@gmail.com",
+        "label": "hi@hackdeacon.cn",
+        "href": "mailto:hi@hackdeacon.cn",
         "copyable": true
       },
       {

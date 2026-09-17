@@ -291,6 +291,10 @@ a, button {
     color: var(--accent);
 }
 
+.contact-item-email a {
+    white-space: nowrap;
+}
+
 .header-avatar-col {
     display: flex;
     flex-direction: column;
@@ -940,10 +944,6 @@ a, button {
         grid-template-columns: repeat(2, 1fr);
         column-gap: 12px;
         row-gap: 8px;
-    }
-
-    .contact-item-email {
-        grid-column: 1 / -1;
     }
 
     .section-header {
